@@ -1,67 +1,135 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavan | ECE & Cyber Security Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: var(--dark); color: white; padding: 60px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-        .container { max-width: 1000px; margin: auto; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; border-top: 5px solid var(--primary); }
-        .card:hover { transform: translateY(-10px); }
-        .badge { background: #dbeafe; color: #1e40af; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { color: var(--primary); border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .footer { text-align: center; padding: 40px; color: #64748b; }
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #10b981;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Navigation & Header */
+        header { 
+            background: linear-gradient(135deg, var(--secondary) 0%, #334155 100%);
+            color: white; 
+            padding: 100px 20px; 
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        header h1 { font-size: 3.5rem; margin: 0; font-weight: 800; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+        /* Project Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card-content { padding: 30px; }
+        
+        .badge { 
+            display: inline-block;
+            background: #eff6ff; 
+            color: var(--primary); 
+            padding: 6px 14px; 
+            border-radius: 30px; 
+            font-size: 0.75rem; 
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .btn:hover { background: #1d4ed8; box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4); }
+
+        /* Skills Section */
+        .skills-box { background: white; padding: 40px; border-radius: 20px; margin-top: 60px; text-align: center; border: 1px solid #e2e8f0; }
+        .skill-tag {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 10px 20px;
+            margin: 6px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        footer { text-align: center; padding: 60px; color: #64748b; font-size: 0.95rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>పవన్ (Pavan)</h1>
-    <p>ECE Student | Cyber Security Enthusiast | PCB Designer</p>
+    <h1>Pavan</h1>
+    <p>ECE Undergrad | Cyber Security Enthusiast | Hardware Hacker</p>
 </header>
 
 <div class="container">
-    <section>
-        <h2>పరిచయం (About Me)</h2>
-        <p>నేను ECE 3వ సంవత్సరం చదువుతున్నాను. నాకు సర్క్యూట్ డిజైనింగ్ మరియు నెట్‌వర్క్ సెక్యూరిటీ అంటే చాలా ఆసక్తి. నా కలి లైనక్స్ ల్యాబ్‌లో రకరకాల సెక్యూరిటీ టూల్స్‌తో ప్రయోగాలు చేస్తుంటాను.</p>
-    </section>
-
+    <h2 style="text-align: center; font-size: 2.2rem; font-weight: 800;">Featured Projects</h2>
+    
     <div class="grid">
         <div class="card">
-            <span class="badge">ECE / KiCad</span>
-            <h3>Dual LED Flasher PCB</h3>
-            <p>KiCad ఉపయోగించి ఒక ఆస్టేబుల్ మల్టీవైబ్రేటర్ సర్క్యూట్‌ను డిజైన్ చేశాను. ఇందులో రూటింగ్ మరియు 3D విజువలైజేషన్ పూర్తి చేశాను.</p>
-            <p><strong>Tools:</strong> KiCad 8.0, PCB Layout Editor</p>
+            <div class="card-content">
+                <span class="badge">Hardware Engineering</span>
+                <h3>Dual LED Flasher PCB</h3>
+                <p>Designed a custom 9V Astable Multivibrator PCB using KiCad. Managed full lifecycle from schematic capture to 3D visualization and trace routing.</p>
+                <a href="my-circuits.kicad_pcb" class="btn">View Project Files</a>
+            </div>
         </div>
 
         <div class="card">
-            <span class="badge">Cyber Security</span>
-            <h3>Network Security Analysis</h3>
-            <p>Kali Linux ఉపయోగించి నెట్‌వర్క్ వల్నరబిలిటీస్ గుర్తించడం మరియు Sherlock టూల్ ద్వారా OSINT ఇన్వెస్టిగేషన్ చేయడం నేర్చుకున్నాను.</p>
-            <p><strong>Tools:</strong> Nmap, Sherlock, Kali Linux</p>
+            <div class="card-content">
+                <span class="badge">Security Research</span>
+                <h3>Network Reconnaissance</h3>
+                <p>Conducted deep-dive investigations using Kali Linux tools like Sherlock for OSINT and Nmap for network vulnerability scanning.</p>
+                <a href="#" class="btn" style="background: var(--accent);">Learn More</a>
+            </div>
         </div>
     </div>
 
-    <section style="margin-top: 40px;">
-        <h2>సాంకేతిక నైపుణ్యాలు (Technical Skills)</h2>
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <span class="badge">PCB Design</span>
-            <span class="badge">Network Security</span>
-            <span class="badge">Python</span>
-            <span class="badge">Ethical Hacking</span>
-            <span class="badge">C Programming</span>
-        </div>
-    </section>
+    <div class="skills-box">
+        <h2 style="margin-bottom: 25px;">Technical Toolkit</h2>
+        <div class="skill-tag">KiCad 8.0</div>
+        <div class="skill-tag">Kali Linux</div>
+        <div class="skill-tag">Network Security</div>
+        <div class="skill-tag">PCB Routing</div>
+        <div class="skill-tag">Python & C</div>
+        <div class="skill-tag">OSINT Investigation</div>
+        <div class="skill-tag">Digital Electronics</div>
+    </div>
 </div>
 
-<div class="footer">
-    <p>© 2026 Pavan's Portfolio | Built with ❤️ on GitHub Pages</p>
-</div>
+<footer>
+    <p>© 2026 Pavan's Digital Portfolio. Developed on Kali Linux.</p>
+</footer>
 
 </body>
 </html>
